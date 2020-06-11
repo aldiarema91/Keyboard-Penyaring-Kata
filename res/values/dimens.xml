@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+    <dimen name="key_height">46dp</dimen>
+    <dimen name="key_width">9.5%p</dimen>
+    <dimen name="key_vertical_gap">7.5px</dimen>
+    <dimen name="key_horizontal_gap">5px</dimen>
+    <dimen name="candidate_font_height">16sp</dimen>
+    <dimen name="candidate_vertical_padding">6sp</dimen>
+</resources>
