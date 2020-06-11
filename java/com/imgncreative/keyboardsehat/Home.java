@@ -18,8 +18,8 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
         Button Absen= findViewById(R.id.btnProduk);
         Absen.setOnClickListener(this);
 
-        Button Tentang= findViewById(R.id.btnAbout);
-        Tentang.setOnClickListener(this);
+        Button Panduan= findViewById(R.id.btnAbout);
+        Panduan.setOnClickListener(this);
 
         Button Data= findViewById(R.id.btnListData);
         Data.setOnClickListener(this);
@@ -38,6 +38,10 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
             case R.id.btnListData:
                 Intent moveIntent1 = new Intent(Home.this, MainActivity.class);
                 startActivity(moveIntent1);
+                break;
+            case R.id.btnAbout:
+                Intent moveIntent2 = new Intent(Home.this, Panduan.class);
+                startActivity(moveIntent2);
                 break;
         }
     }

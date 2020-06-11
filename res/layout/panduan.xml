@@ -3,55 +3,169 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center_vertical|center_horizontal"
+
     android:background="@drawable/bg_gradient">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:gravity="center_vertical|center_horizontal"
-        android:orientation="vertical">
-
-        <ViewSwitcher
-            android:id="@+id/switcher"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:scaleType="fitCenter"
-            android:inAnimation="@anim/fade_in"
-            android:outAnimation="@anim/fade_out">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                android:src="@drawable/pemasangan" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ijinkan" />
-
-        </ViewSwitcher>
-
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:orientation="vertical">
+        android:padding="15dp">
 
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="-10dp"
+            android:layout_width="39dp"
+            android:layout_height="26dp"
+            android:src="@drawable/arrows" />
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Panduan pemasangan"
             android:textSize="28dp"
-            android:textAlignment="center"
-            android:text="Keyboard Penyaring Kata"
-            android:textColor="#fff"
-            android:paddingHorizontal="30dp"
-            android:textStyle="bold"/>
+            android:textColor="#ffffff"/>
     </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ViewFlipper
+            android:id="@+id/view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="30dp"
+            android:layout_marginTop="10dp"
+            android:inAnimation="@android:anim/slide_out_right"
+            android:outAnimation="@android:anim/slide_in_left">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:src="@drawable/pemasangan"
+                    android:paddingHorizontal="30dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. Klik tombol Ijinkan Keyboard"
+                    android:textSize="24dp"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:src="@drawable/ijinkan"
+                    android:paddingHorizontal="30dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. Ijinkan Keyboard Penyaring Kata"
+                    android:textSize="24dp"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="30dp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="400dp"
+                    android:src="@drawable/aktifkan"
+                    android:paddingHorizontal="30dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="3. Aktifkan Keyboard Penyaring Kata"
+                    android:textSize="24dp"
+                    android:paddingHorizontal="30dp"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:layout_marginTop="-50dp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_keyboard_sehat"
+                    android:paddingHorizontal="30dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="250dp"
+                    android:src="@drawable/gunakan_keyboard"
+                    android:layout_marginBottom="0dp"
+                    android:paddingHorizontal="30dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pasang dan Gunakan"
+                    android:paddingHorizontal="30dp"
+                    android:textSize="24dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keyboard"
+                    android:paddingHorizontal="30dp"
+                    android:textSize="24dp"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </ViewFlipper>
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kembali"
+            android:onClick="previousView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/my_button"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lanjut"
+            android:onClick="nextView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@drawable/my_button"/>
+
+    </RelativeLayout>
+
 </LinearLayout>

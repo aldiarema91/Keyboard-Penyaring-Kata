@@ -24,6 +24,9 @@ public class Pemasangan extends AppCompatActivity implements View.OnClickListene
         Button btn2 = findViewById(R.id.btn2);
         btn2.setOnClickListener(this);
 
+        Button btn3 = findViewById(R.id.btn3);
+        btn3.setOnClickListener(this);
+
         ImageView imgBack = findViewById(R.id.imgBack);
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +46,10 @@ public class Pemasangan extends AppCompatActivity implements View.OnClickListene
             case R.id.btn2:
                 InputMethodManager imeManager = (InputMethodManager) getApplicationContext().getSystemService(INPUT_METHOD_SERVICE);
                 imeManager.showInputMethodPicker();
+                break;
+            case R.id.btn3:
+                Intent moveIntent = new Intent(this, AddEdit.class);
+                startActivity(moveIntent);
                 break;
         }
     }

@@ -1,5 +1,6 @@
 package com.imgncreative.keyboardsehat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -173,6 +174,8 @@ public class AddEdit extends AppCompatActivity {
             }
             SQLite.insert(txt_text.getText().toString().trim(), status, Integer.toString(bar_accuracy.getProgress()));
             blank();
+            Intent moveIntent = new Intent(this, MainActivity.class);
+            startActivity(moveIntent);
             finish();
         }
     }

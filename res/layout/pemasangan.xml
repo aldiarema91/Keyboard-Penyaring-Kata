@@ -36,7 +36,7 @@
 
             <Button
                 android:id="@+id/btn"
-                android:text="Ijinkan MyBoard"
+                android:text="Ijinkan Keyboard"
                 android:clickable="true"
                 android:foreground="?android:attr/selectableItemBackground"
                 android:background="@drawable/my_button"
@@ -48,7 +48,7 @@
                 android:layout_marginBottom="20dp"/>
             <Button
                 android:id="@+id/btn2"
-                android:text="Aktifkan MyBoard"
+                android:text="Aktifkan Keyboard"
                 android:background="@drawable/my_button"
                 android:layout_gravity="center"
                 android:layout_width="200dp"
@@ -58,12 +58,28 @@
                 android:layout_marginBottom="20dp"/>
             <EditText
                 android:layout_width="300dp"
+                android:layout_marginTop="30dp"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
                 android:textStyle="bold"
+
+                android:padding="16dp"
                 android:textColor="#fff"
                 android:inputType="text"
+                android:textColorHint="@color/cardview_light_background"
                 android:hint="Coba tulis kata yang dicekal"/>
+            <Button
+                android:id="@+id/btn3"
+                android:layout_marginTop="50dp"
+                android:text="Tambahkan Kata"
+                android:layout_gravity="center"
+                android:layout_width="200dp"
+                android:textSize="7pt"
+                android:textColor="#303030"
+                android:background="#FFEB3B"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
         </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
