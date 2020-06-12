@@ -29,22 +29,33 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         final String SQL_CREATE_TEXT_TABLE = "CREATE TABLE " + TABLE_SQLite + " (" +
                 COLUMN_ID + " INTEGER PRIMARY KEY autoincrement, " +
-                COLUMN_TEXT + " TEXT NOT NULL, " +
-                COLUMN_STATUS + " TEXT NOT NULL," +
-                COLUMN_AKURASI + " INTEGER NOT NULL" +
+                COLUMN_TEXT + " VARCHAR(40) NOT NULL, " +
+                COLUMN_STATUS + " VARCHAR(10) NOT NULL," +
+                COLUMN_AKURASI + " INTEGER(3) NOT NULL" +
                 " )";
 
         final String SQL_INSERT_TEXT_TABLE = "INSERT INTO "+TABLE_SQLite+" ("+COLUMN_ID+" ,"+COLUMN_TEXT+", "+COLUMN_STATUS+", "+COLUMN_AKURASI+") VALUES " +
-                "(1,'kontol', 'Aktif', 5),"+
-                "(2,'memek', 'Aktif', 8),"+
-                "(3,'asu', 'Aktif', 10),"+
-                "(4,'jancok', 'Aktif', 5),"+
-                "(5,'taek', 'Aktif', 9),"+
-                "(6,'cok', 'Aktif', 10),"+
-                "(7,'telek', 'Aktif', 10),"+
-                "(8,'porno', 'Aktif', 10),"+
-                "(9,'perek', 'Aktif', 10),"+
-                "(10,'picek', 'Aktif', 10)";
+                "(1, 'Jancok', 'aktif', 10),"+
+                "(2, 'Kontol', 'aktif', 5),"+
+                "(3, 'Memek', 'aktif', 5),"+
+                "(4, 'Telek', 'aktif', 5),"+
+                "(5, 'Taek', 'aktif', 5),"+
+                "(6, 'Asu', 'aktif', 0),"+
+                "(7, 'Tolol', 'aktif', 5),"+
+                "(8, 'Bego', 'aktif', 5),"+
+                "(9, 'Budek', 'aktif', 5),"+
+                "(10, 'Ngentod', 'aktif', 8),"+
+                "(11, 'Kampang', 'aktif', 5),"+
+                "(12, 'Naskleng', 'aktif', 5),"+
+                "(14, 'Goblok', 'aktif', 5),"+
+                "(15, 'Brengsek', 'Aktif', 5),"+
+                "(16, 'Sundala', 'Aktif', 5),"+
+                "(17, 'Cukimae', 'Aktif', 5),"+
+                "(18, 'Puki', 'Aktif', 5),"+
+                "(19, 'Taelaso', 'Aktif', 5),"+
+                "(20, 'Luji', 'Tidak aktif', 5),"+
+                "(21, 'Kembeng', 'Tidak aktif', 5),"+
+                "(22, 'Pantek', 'Aktif', 5)";
         db.execSQL(SQL_CREATE_TEXT_TABLE);
         db.execSQL(SQL_INSERT_TEXT_TABLE);
     }

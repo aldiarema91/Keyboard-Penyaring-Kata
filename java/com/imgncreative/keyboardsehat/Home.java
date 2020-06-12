@@ -43,6 +43,10 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
                 Intent moveIntent2 = new Intent(Home.this, Panduan.class);
                 startActivity(moveIntent2);
                 break;
+            case R.id.btnHelp:
+                Intent moveIntent3 = new Intent(Home.this, Bantuan.class);
+                startActivity(moveIntent3);
+                break;
         }
     }
 }

@@ -38,6 +38,9 @@
         <activity
             android:name=".Panduan"
             android:screenOrientation="nosensor" />
+        <activity
+            android:name=".Bantuan"
+            android:screenOrientation="nosensor" />
 
         <service android:name=".SoftKeyboard"
             android:permission="android.permission.BIND_INPUT_METHOD">
