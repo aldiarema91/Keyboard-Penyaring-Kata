@@ -58,6 +58,12 @@ public class Adapter extends BaseAdapter {
         id.setText(data.getId());
         name.setText(data.getText());
         address.setText(data.getStatus());
+        if (data.getStatus().toLowerCase().equals("aktif")){
+            address.setBackgroundResource(R.drawable.badge_succes);
+        }else{
+            address.setBackgroundResource(R.drawable.badge_danger);
+        }
+
         akurasi.setText("Akurasi : "+ ( akur == 0 ? 0 : akur+"0" ) +"%");
 
         return convertView;

@@ -35,19 +35,19 @@ public class DBHelper extends SQLiteOpenHelper {
                 " )";
 
         final String SQL_INSERT_TEXT_TABLE = "INSERT INTO "+TABLE_SQLite+" ("+COLUMN_ID+" ,"+COLUMN_TEXT+", "+COLUMN_STATUS+", "+COLUMN_AKURASI+") VALUES " +
-                "(1, 'Jancok', 'aktif', 10),"+
-                "(2, 'Kontol', 'aktif', 5),"+
-                "(3, 'Memek', 'aktif', 5),"+
-                "(4, 'Telek', 'aktif', 5),"+
-                "(5, 'Taek', 'aktif', 5),"+
-                "(6, 'Asu', 'aktif', 0),"+
-                "(7, 'Tolol', 'aktif', 5),"+
-                "(8, 'Bego', 'aktif', 5),"+
-                "(9, 'Budek', 'aktif', 5),"+
-                "(10, 'Ngentod', 'aktif', 8),"+
-                "(11, 'Kampang', 'aktif', 5),"+
-                "(12, 'Naskleng', 'aktif', 5),"+
-                "(14, 'Goblok', 'aktif', 5),"+
+                "(1, 'Jancok', 'Aktif', 10),"+
+                "(2, 'Kontol', 'Aktif', 5),"+
+                "(3, 'Memek', 'Aktif', 5),"+
+                "(4, 'Telek', 'Aktif', 5),"+
+                "(5, 'Taek', 'Aktif', 5),"+
+                "(6, 'Asu', 'Aktif', 0),"+
+                "(7, 'Tolol', 'Aktif', 5),"+
+                "(8, 'Bego', 'Aktif', 5),"+
+                "(9, 'Budek', 'Aktif', 5),"+
+                "(10, 'Ngentod', 'Aktif', 8),"+
+                "(11, 'Kampang', 'Aktif', 5),"+
+                "(12, 'Naskleng', 'Aktif', 5),"+
+                "(14, 'Goblok', 'Aktif', 5),"+
                 "(15, 'Brengsek', 'Aktif', 5),"+
                 "(16, 'Sundala', 'Aktif', 5),"+
                 "(17, 'Cukimae', 'Aktif', 5),"+

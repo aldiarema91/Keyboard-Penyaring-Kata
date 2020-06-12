@@ -107,7 +107,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
             String status = row.get(i).get(TAG_STATUS);
             String akurasi = row.get(i).get(TAG_AKURASI);
 
-            if (status.equals("Aktif")){
+            if (status.equals("Aktif") || (status.toLowerCase()).equals("aktif")){
                 itemList.add(text);
                 itemAccu.add(akurasi);
             }
@@ -148,11 +148,12 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
         Log.d(TAG, "DISTABCE: "+dist);
         boolean limit = false;
         int accuracy = 0;
+        int dist_accur = 0;
         float accu_dist, distance;
         String ban_chosen = "";
         for (int i = 0; i < data_kotor.size(); i++)
         {
-            distance = (float) data_kotor.get(i).length() - ((float) data_kotor.get(i).length() * 1/2);
+            distance =  ((float) data_kotor.get(i).length() * 1/3);
             accuracy = Integer.parseInt(data_akurasi.get(i));
             accu_dist = ((float) accuracy / 10 * (float) data_kotor.get(i).length()) - distance;
 
@@ -161,17 +162,17 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
             Log.d(TAG, "AKURASI: "+accuracy);
             Log.d(TAG, "DISTANCE: "+(float) dist.get(i)+"("+distance+")("+data_kotor.get(i).length()+")");
             Log.d(TAG, "ACCU_DIST: "+accu_dist+" => "+Math.abs(Math.round(accu_dist)));
+            dist_accur = Math.abs(Math.round(accu_dist));
+            Log.d(TAG, "Distance vs accu: "+dist.get((i))+" x "+dist_accur);
 
             if (dist.get(i) == 0 || (dist.get(i)) == 0 && accuracy == 10){
                 System.out.println("sama");
                 limit = true;
                 ban_chosen = data_kotor.get(i);
-            }else if ((float) dist.get(i) < distance && accuracy > 0){
-                if (dist.get(i) <= Math.abs(Math.round(accu_dist))){
-                    System.out.println("mirip");
-                    limit = true;
-                    ban_chosen = data_kotor.get(i);
-                }
+            }else if ((float) dist.get(i) <= dist_accur && accuracy > 0){
+                System.out.println("mirip");
+                limit = true;
+                ban_chosen = data_kotor.get(i);
             }
 
             System.out.println("============================");
@@ -473,11 +474,9 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
                 current.setShifted(false);
             }
         } else {
-            boolean ask = false;
             handleCharacter(primaryCode, keyCodes);
             if (mComposing.length() > 2){
-                ask = checkBannedText1(mComposing.toString());
-                if (ask){
+                if (checkBannedText1(mComposing.toString())){
                     mComposing.setLength(0);
                 }
             }
