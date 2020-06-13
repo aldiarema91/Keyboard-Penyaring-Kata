@@ -23,6 +23,15 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".PopActivty" android:theme="@style/AppTheme.Popme" android:screenOrientation="nosensor"></activity>
+        <activity android:name=".PopPinData" android:theme="@style/AppTheme.Popme" android:screenOrientation="nosensor"></activity>
+
+        <activity
+            android:name=".AturPin"
+            android:screenOrientation="nosensor" />
+        <activity
+            android:name=".Poppin"
+            android:screenOrientation="nosensor" />
         <activity
             android:name=".Home"
             android:screenOrientation="nosensor" />
@@ -31,7 +40,7 @@
             android:screenOrientation="nosensor" />
         <activity
             android:name=".Pemasangan"
-            android:screenOrientation="fullSensor" />
+            android:screenOrientation="nosensor" />
         <activity
             android:name=".AddEdit"
             android:screenOrientation="nosensor" />
@@ -42,12 +51,16 @@
             android:name=".Bantuan"
             android:screenOrientation="nosensor" />
 
-        <service android:name=".SoftKeyboard"
+        <service
+            android:name=".SoftKeyboard"
             android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
             </intent-filter>
-            <meta-data android:name="android.view.im" android:resource="@xml/method" />
+
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
         </service>
     </application>
 

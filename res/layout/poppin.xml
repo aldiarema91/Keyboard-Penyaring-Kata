@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mybutton"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingHorizontal="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tulis PIN"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:textColor="#000"/>
+            <EditText
+                android:id="@+id/pin2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:letterSpacing="1"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:maxLength="6"
+                android:padding="16dp"
+                android:textColor="@color/colorAccent"
+                android:inputType="numberPassword"
+                android:textColorHint="@color/cardview_light_background"/>
+            <TextView
+                android:id="@+id/err2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:background="@drawable/badge_danger"
+                android:paddingHorizontal="10dp"
+                android:text="Pin tidak sama"/>
+            <Button
+                android:id="@+id/submit"
+                android:layout_marginTop="15dp"
+                android:text="Submit"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:textSize="7pt"
+                android:textColor="#303030"
+                android:background="@drawable/badge_succes"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>

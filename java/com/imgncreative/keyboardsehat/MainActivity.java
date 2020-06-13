@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 //import android.widget.Adapter;
 //import android.widget.AdapterView;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG_TEXT = "text";
     public static final String TAG_STATUS = "status";
     public static final String TAG_AKURASI = "akurasi";
+    private String iam;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +60,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        InputMethodManager im = (InputMethodManager)getSystemService(INPUT_METHOD_SERVICE);
+        iam = im.getEnabledInputMethodList().toString();
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

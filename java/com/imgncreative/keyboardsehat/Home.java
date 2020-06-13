@@ -9,6 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Home extends AppCompatActivity implements View.OnClickListener {
+    public static final String TAG_ID = "";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +38,11 @@ public class Home extends AppCompatActivity implements View.OnClickListener {
                 startActivity(moveIntent);
                 break;
             case R.id.btnListData:
-                Intent moveIntent1 = new Intent(Home.this, MainActivity.class);
-                startActivity(moveIntent1);
+                Intent poppin = new Intent(getApplicationContext(), PopPinData.class);
+                poppin.putExtra(TAG_ID, "ijin");
+                startActivity(poppin);
+                /*Intent moveIntent1 = new Intent(Home.this, MainActivity.class);
+                startActivity(moveIntent1);*/
                 break;
             case R.id.btnAbout:
                 Intent moveIntent2 = new Intent(Home.this, Panduan.class);

@@ -47,6 +47,7 @@ public class Panduan extends AppCompatActivity implements View.OnClickListener {
             btnNext.setText("Lanjut");
             btnPrev.setVisibility(View.VISIBLE);
             viewFlipper.showPrevious();
+            btnNext.setBackgroundResource(R.drawable.my_button);
         }
     }
     public void nextView(View v) {
@@ -55,6 +56,7 @@ public class Panduan extends AppCompatActivity implements View.OnClickListener {
 
         if (viewFlipper.getDisplayedChild() == 2){
             btnNext.setText("Mulai");
+            btnNext.setBackgroundResource(R.drawable.mybutton_yellow);
             viewFlipper.showNext();
         }else if(viewFlipper.getDisplayedChild() == 3){
             Intent moveIntent = new Intent(this, Pemasangan.class);

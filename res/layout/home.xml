@@ -62,6 +62,7 @@
                 android:textColor="#282828"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"/>
+
             <Button
                 android:id="@+id/btnAbout"
                 android:text="Panduan"

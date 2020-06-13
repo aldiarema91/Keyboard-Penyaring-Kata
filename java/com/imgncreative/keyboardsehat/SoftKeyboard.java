@@ -145,7 +145,7 @@ public class SoftKeyboard extends InputMethodService implements KeyboardView.OnK
         {
             dist.add(distance(data_kotor.get(i), text));
         }
-        Log.d(TAG, "DISTABCE: "+dist);
+        Log.d(TAG, "DISTANCE: "+dist);
         boolean limit = false;
         int accuracy = 0;
         int dist_accur = 0;
